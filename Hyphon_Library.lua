@@ -2110,7 +2110,7 @@ do
 
         function drawing:Remove()
 
-            if drawing._object then
+            if rawget(drawing._object, '__OBJECT_EXISTS') then
                 self._object:Remove()
             end
 
@@ -2281,7 +2281,7 @@ do
         return text
     end, {
         Size = 13,
-        Font = 2,
+        Font = 1,
         Position = udim2_new(0,0,0,0),
         Visible = true,
     })
