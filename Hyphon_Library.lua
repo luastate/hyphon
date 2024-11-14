@@ -2110,7 +2110,7 @@ do
 
         function drawing:Remove()
 
-            if rawget(drawing._object, '__OBJECT_EXISTS') then
+            if drawing._object then
                 self._object:Remove()
             end
 
